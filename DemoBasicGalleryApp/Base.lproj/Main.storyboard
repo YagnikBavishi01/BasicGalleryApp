@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="login-vc-001">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="login-scene-001">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="login-vc-001" customClass="LoginViewController" customModule="DemoBasicGalleryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="login-view-001">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="photo.stack" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="login-logo-001">
+                                <rect key="frame" x="160.5" y="326" width="72" height="72"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="login-logo-w"/>
+                                    <constraint firstAttribute="height" constant="72" id="login-logo-h"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallpaper Gallery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="login-title-001">
+                                <rect key="frame" x="32" y="410" width="329" height="34"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in to browse and save your favorite wallpapers" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="login-subtitle-001">
+                                <rect key="frame" x="32" y="456" width="329" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="login-signin-001">
+                                <rect key="frame" x="32" y="528" width="329" height="48"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="login-signin-h"/>
+                                </constraints>
+                                <state key="normal" title="Sign in with Google">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signInTapped:" destination="login-vc-001" eventType="touchUpInside" id="login-signin-action"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" hidesWhenStopped="YES" translatesAutoresizingMaskIntoConstraints="NO" id="login-activity-001">
+                                <rect key="frame" x="181.5" y="592" width="30" height="30"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="login-safearea-001"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="login-logo-001" firstAttribute="centerX" secondItem="login-view-001" secondAttribute="centerX" id="login-c1"/>
+                            <constraint firstItem="login-title-001" firstAttribute="top" secondItem="login-logo-001" secondAttribute="bottom" constant="12" id="login-c2"/>
+                            <constraint firstItem="login-title-001" firstAttribute="leading" secondItem="login-view-001" secondAttribute="leading" constant="32" id="login-c3"/>
+                            <constraint firstItem="login-title-001" firstAttribute="trailing" secondItem="login-view-001" secondAttribute="trailing" constant="-32" id="login-c4"/>
+                            <constraint firstItem="login-subtitle-001" firstAttribute="top" secondItem="login-title-001" secondAttribute="bottom" constant="12" id="login-c5"/>
+                            <constraint firstItem="login-subtitle-001" firstAttribute="leading" secondItem="login-view-001" secondAttribute="leading" constant="32" id="login-c6"/>
+                            <constraint firstItem="login-subtitle-001" firstAttribute="trailing" secondItem="login-view-001" secondAttribute="trailing" constant="-32" id="login-c7"/>
+                            <constraint firstItem="login-logo-001" firstAttribute="centerY" secondItem="login-view-001" secondAttribute="centerY" constant="-120" id="login-c8"/>
+                            <constraint firstItem="login-signin-001" firstAttribute="top" secondItem="login-subtitle-001" secondAttribute="bottom" constant="32" id="login-c9"/>
+                            <constraint firstItem="login-signin-001" firstAttribute="leading" secondItem="login-view-001" secondAttribute="leading" constant="32" id="login-c10"/>
+                            <constraint firstItem="login-signin-001" firstAttribute="trailing" secondItem="login-view-001" secondAttribute="trailing" constant="-32" id="login-c11"/>
+                            <constraint firstItem="login-activity-001" firstAttribute="top" secondItem="login-signin-001" secondAttribute="bottom" constant="16" id="login-c12"/>
+                            <constraint firstItem="login-activity-001" firstAttribute="centerX" secondItem="login-view-001" secondAttribute="centerX" id="login-c13"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="login-navitem-001"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="login-activity-001" id="login-outlet-activity"/>
+                        <outlet property="signInButton" destination="login-signin-001" id="login-outlet-signin"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="login-firstresponder-001" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1298" y="-533"/>
+        </scene>
+        <!--Gallery View Controller-->
+        <scene sceneID="gallery-scene-001">
+            <objects>
+                <viewController storyboardIdentifier="GalleryViewController" id="gallery-vc-001" customClass="GalleryViewController" customModule="DemoBasicGalleryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gallery-view-001">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gallery-collection-001">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="8" id="gallery-flowlayout-001">
+                                    <size key="itemSize" width="150" height="180"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="12" minY="12" maxX="12" maxY="12"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryImageCell" customClass="GalleryImageCell" customModule="DemoBasicGalleryApp" customModuleProvider="target" id="gallery-cell-001">
+                                        <rect key="frame" x="12" y="12" width="150" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gallery-cellcontent-001">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="gallery-cellimage-001">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="180"/>
+                                                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gallery-cellauthor-001">
+                                                    <rect key="frame" x="8" y="160" width="134" height="14"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gallery-cellimage-001" firstAttribute="top" secondItem="gallery-cellcontent-001" secondAttribute="top" id="gallery-cc1"/>
+                                                <constraint firstItem="gallery-cellimage-001" firstAttribute="leading" secondItem="gallery-cellcontent-001" secondAttribute="leading" id="gallery-cc2"/>
+                                                <constraint firstItem="gallery-cellimage-001" firstAttribute="trailing" secondItem="gallery-cellcontent-001" secondAttribute="trailing" id="gallery-cc3"/>
+                                                <constraint firstItem="gallery-cellimage-001" firstAttribute="bottom" secondItem="gallery-cellcontent-001" secondAttribute="bottom" id="gallery-cc4"/>
+                                                <constraint firstItem="gallery-cellauthor-001" firstAttribute="leading" secondItem="gallery-cellcontent-001" secondAttribute="leading" constant="8" id="gallery-cc5"/>
+                                                <constraint firstItem="gallery-cellauthor-001" firstAttribute="trailing" secondItem="gallery-cellcontent-001" secondAttribute="trailing" constant="-8" id="gallery-cc6"/>
+                                                <constraint firstItem="gallery-cellauthor-001" firstAttribute="bottom" secondItem="gallery-cellcontent-001" secondAttribute="bottom" constant="-6" id="gallery-cc7"/>
+                                            </constraints>
+                                        </view>
+                                        <connections>
+                                            <outlet property="authorLabel" destination="gallery-cellauthor-001" id="gallery-cell-outlet-author"/>
+                                            <outlet property="imageView" destination="gallery-cellimage-001" id="gallery-cell-outlet-image"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" hidden="YES" text="No wallpapers yet.&#10;Connect to the internet and pull to refresh." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gallery-empty-001">
+                                <rect key="frame" x="32" y="406" width="329" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gallery-safearea-001"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gallery-collection-001" firstAttribute="top" secondItem="gallery-safearea-001" secondAttribute="top" id="gallery-vc1"/>
+                            <constraint firstItem="gallery-collection-001" firstAttribute="leading" secondItem="gallery-view-001" secondAttribute="leading" id="gallery-vc2"/>
+                            <constraint firstItem="gallery-collection-001" firstAttribute="trailing" secondItem="gallery-view-001" secondAttribute="trailing" id="gallery-vc3"/>
+                            <constraint firstItem="gallery-collection-001" firstAttribute="bottom" secondItem="gallery-view-001" secondAttribute="bottom" id="gallery-vc4"/>
+                            <constraint firstItem="gallery-empty-001" firstAttribute="centerX" secondItem="gallery-view-001" secondAttribute="centerX" id="gallery-vc5"/>
+                            <constraint firstItem="gallery-empty-001" firstAttribute="centerY" secondItem="gallery-view-001" secondAttribute="centerY" id="gallery-vc6"/>
+                            <constraint firstItem="gallery-empty-001" firstAttribute="leading" secondItem="gallery-view-001" secondAttribute="leading" constant="32" id="gallery-vc7"/>
+                            <constraint firstItem="gallery-empty-001" firstAttribute="trailing" secondItem="gallery-view-001" secondAttribute="trailing" constant="-32" id="gallery-vc8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gallery-navitem-001"/>
+                    <connections>
+                        <outlet property="collectionView" destination="gallery-collection-001" id="gallery-outlet-collection"/>
+                        <outlet property="emptyStateLabel" destination="gallery-empty-001" id="gallery-outlet-empty"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gallery-firstresponder-001" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-540" y="-533"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="profile-scene-001">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="profile-vc-001" customClass="ProfileViewController" customModule="DemoBasicGalleryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="profile-view-001">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="profile-avatar-001">
+                                <rect key="frame" x="148.5" y="107" width="96" height="96"/>
+                                <color key="tintColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="profile-avatar-w"/>
+                                    <constraint firstAttribute="height" constant="96" id="profile-avatar-h"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="profile-name-001">
+                                <rect key="frame" x="24" y="219" width="345" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email@example.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="profile-email-001">
+                                <rect key="frame" x="24" y="252" width="345" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="profile-logout-001">
+                                <rect key="frame" x="32" y="310" width="329" height="48"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="profile-logout-h"/>
+                                </constraints>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="logoutTapped:" destination="profile-vc-001" eventType="touchUpInside" id="profile-logout-action"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="profile-safearea-001"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="profile-avatar-001" firstAttribute="top" secondItem="profile-safearea-001" secondAttribute="top" constant="48" id="profile-c1"/>
+                            <constraint firstItem="profile-avatar-001" firstAttribute="centerX" secondItem="profile-view-001" secondAttribute="centerX" id="profile-c2"/>
+                            <constraint firstItem="profile-name-001" firstAttribute="top" secondItem="profile-avatar-001" secondAttribute="bottom" constant="16" id="profile-c3"/>
+                            <constraint firstItem="profile-name-001" firstAttribute="leading" secondItem="profile-view-001" secondAttribute="leading" constant="24" id="profile-c4"/>
+                            <constraint firstItem="profile-name-001" firstAttribute="trailing" secondItem="profile-view-001" secondAttribute="trailing" constant="-24" id="profile-c5"/>
+                            <constraint firstItem="profile-email-001" firstAttribute="top" secondItem="profile-name-001" secondAttribute="bottom" constant="6" id="profile-c6"/>
+                            <constraint firstItem="profile-email-001" firstAttribute="leading" secondItem="profile-view-001" secondAttribute="leading" constant="24" id="profile-c7"/>
+                            <constraint firstItem="profile-email-001" firstAttribute="trailing" secondItem="profile-view-001" secondAttribute="trailing" constant="-24" id="profile-c8"/>
+                            <constraint firstItem="profile-logout-001" firstAttribute="top" secondItem="profile-email-001" secondAttribute="bottom" constant="40" id="profile-c9"/>
+                            <constraint firstItem="profile-logout-001" firstAttribute="leading" secondItem="profile-view-001" secondAttribute="leading" constant="32" id="profile-c10"/>
+                            <constraint firstItem="profile-logout-001" firstAttribute="trailing" secondItem="profile-view-001" secondAttribute="trailing" constant="-32" id="profile-c11"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="profile-navitem-001"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="profile-avatar-001" id="profile-outlet-avatar"/>
+                        <outlet property="emailLabel" destination="profile-email-001" id="profile-outlet-email"/>
+                        <outlet property="nameLabel" destination="profile-name-001" id="profile-outlet-name"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="profile-firstresponder-001" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1298" y="270"/>
+        </scene>
+        <!--Image Detail View Controller-->
+        <scene sceneID="detail-scene-001">
+            <objects>
+                <viewController storyboardIdentifier="ImageDetailViewController" id="detail-vc-001" customClass="ImageDetailViewController" customModule="DemoBasicGalleryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="detail-view-001">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="detail-image-001">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" hidesWhenStopped="YES" translatesAutoresizingMaskIntoConstraints="NO" id="detail-activity-001">
+                                <rect key="frame" x="176.5" y="416" width="40" height="40"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="detail-image-001" firstAttribute="top" secondItem="detail-view-001" secondAttribute="top" id="detail-c1"/>
+                            <constraint firstItem="detail-image-001" firstAttribute="leading" secondItem="detail-view-001" secondAttribute="leading" id="detail-c2"/>
+                            <constraint firstItem="detail-image-001" firstAttribute="trailing" secondItem="detail-view-001" secondAttribute="trailing" id="detail-c3"/>
+                            <constraint firstItem="detail-image-001" firstAttribute="bottom" secondItem="detail-view-001" secondAttribute="bottom" id="detail-c4"/>
+                            <constraint firstItem="detail-activity-001" firstAttribute="centerX" secondItem="detail-view-001" secondAttribute="centerX" id="detail-c5"/>
+                            <constraint firstItem="detail-activity-001" firstAttribute="centerY" secondItem="detail-view-001" secondAttribute="centerY" id="detail-c6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="detail-navitem-001"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="detail-activity-001" id="detail-outlet-activity"/>
+                        <outlet property="imageView" destination="detail-image-001" id="detail-outlet-image"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="detail-firstresponder-001" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218" y="270"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="119"/>
+        <image name="photo.stack" catalog="system" width="128" height="97"/>
+        <systemColor name="secondaryLabelColor">
+            <color white="0.0" alpha="0.60" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000001" green="0.94901960780000001" blue="0.96862745100000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921569" green="0.7803921569" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254899999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
