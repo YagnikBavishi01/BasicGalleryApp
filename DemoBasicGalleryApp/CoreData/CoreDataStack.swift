@@ -23,12 +23,14 @@ final class CoreDataStack {
     /// than a recoverable runtime condition.
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "GalleryModel")
-        container.loadPersistentStores { [weak self] _, error in
+        container.loadPersistentStores { _, error in
             if let error = error as NSError? {
                 assertionFailure("Unresolved Core Data error \(error), \(error.userInfo)")
             }
-            self?.viewContext.automaticallyMergesChangesFromParent = true
         }
+        // Configure via `container` directly: going through `self.viewContext`
+        // here would re-enter this lazy initializer and recurse.
+        container.viewContext.automaticallyMergesChangesFromParent = true
         return container
     }()
 

@@ -26,6 +26,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
 
+        // Show something immediately so the user never sees a blank window
+        // while the previous Google session is being restored.
+        let placeholder = UIViewController()
+        placeholder.view.backgroundColor = .systemBackground
+        window.rootViewController = placeholder
+        window.makeKeyAndVisible()
+
         let coordinator = AppCoordinator(window: window)
         self.coordinator = coordinator
 
